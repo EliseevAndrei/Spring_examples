@@ -1,4 +1,4 @@
-package com.mycompany.app.tacos.data;
+package com.mycompany.app.tacos.data.jdbc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycompany.app.tacos.Order;

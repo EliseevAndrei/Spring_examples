@@ -1,7 +1,7 @@
 package com.mycompany.app.tacos.web;
 
 import com.mycompany.app.tacos.Order;
-import com.mycompany.app.tacos.data.OrderRepository;
+import com.mycompany.app.tacos.data.jdbc.OrderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

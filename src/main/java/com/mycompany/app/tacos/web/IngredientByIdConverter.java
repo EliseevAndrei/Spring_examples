@@ -1,7 +1,7 @@
 package com.mycompany.app.tacos.web;
 
 import com.mycompany.app.tacos.Ingredient;
-import com.mycompany.app.tacos.data.IngredientRepository;
+import com.mycompany.app.tacos.data.jdbc.IngredientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
