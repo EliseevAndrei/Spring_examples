@@ -1,25 +1,15 @@
-delete from Taco_Order_Tacos;
-delete from Taco_Ingredients;
-delete from Taco;
-delete from Taco_Order;
-delete from Ingredient;
-insert into Ingredient (id, name, type)
-values ('FLTO', 'Flour Tortilla', 'WRAP');
-insert into Ingredient (id, name, type)
-values ('COTO', 'Corn Tortilla', 'WRAP');
-insert into Ingredient (id, name, type)
-values ('GRBF', 'Ground Beef', 'PROTEIN');
-insert into Ingredient (id, name, type)
-values ('CARN', 'Carnitas', 'PROTEIN');
-insert into Ingredient (id, name, type)
-values ('TMTO', 'Diced Tomatoes', 'VEGGIES');
-insert into Ingredient (id, name, type)
-values ('LETC', 'Lettuce', 'VEGGIES');
-insert into Ingredient (id, name, type)
-values ('CHED', 'Cheddar', 'CHEESE');
-insert into Ingredient (id, name, type)
-values ('JACK', 'Monterrey Jack', 'CHEESE');
-insert into Ingredient (id, name, type)
-values ('SLSA', 'Salsa', 'SAUCE');
-insert into Ingredient (id, name, type)
-values ('SRCR', 'Sour Cream', 'SAUCE');
+insert into Ingredient (id, name, type) values ('FLTO', 'Flour Tortilla', 0);
+insert into Ingredient (id, name, type) values ('COTO', 'Corn Tortilla', 0);
+insert into Ingredient (id, name, type) values ('GRBF', 'Ground Beef', 1);
+insert into Ingredient (id, name, type) values ('CARN', 'Carnitas', 1);
+insert into Ingredient (id, name, type) values ('TMTO', 'Diced Tomatoes', 2);
+insert into Ingredient (id, name, type) values ('LETC', 'Lettuce', 2);
+insert into Ingredient (id, name, type) values ('CHED', 'Cheddar', 3);
+insert into Ingredient (id, name, type) values ('JACK', 'Monterrey Jack', 3);
+insert into Ingredient (id, name, type) values ('SLSA', 'Salsa', 4);
+insert into Ingredient (id, name, type) values ('SRCR', 'Sour Cream', 4);
+insert into Role (id, name) values (1, 0);
+insert into Role (id, name) values (2, 1);
+insert into Role (id, name) values (3, 2);
+insert into User (ID,CITY ,FULLNAME,PASSWORD,	PHONENUMBER ,STATE,	STREET	,USERNAME ,	ZIP ) values (1,	Минск,	Вероника Козловская,	d41a82d9da92e25b8076e6f8fdb9390501304e6664571cade87bb0ba4bbb1c89276f430d912500be,	+375292321866	,12,	ул. Гикало 9	,dron	,11/11  );
+insert into user_role(user_id, role_id) values ( 1,2 );
