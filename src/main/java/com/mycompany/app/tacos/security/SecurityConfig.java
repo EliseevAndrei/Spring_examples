@@ -5,6 +5,7 @@ import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web
         .configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web
@@ -43,6 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers("/design", "/orders")
                 .hasRole(UserRoleEnum.USER.name())
                 .antMatchers("/**").access("permitAll")
@@ -50,6 +52,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
+
+                .and()
+                .httpBasic()
+                .realmName("Taco Cloud")
 
                 .and()
                 .logout()
