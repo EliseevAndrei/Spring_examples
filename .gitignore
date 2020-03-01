@@ -1,5 +1,11 @@
-target/
-.idea/
-out/
-lib/
+HELP.md
+**/*/target/
+.ideaDataSources
+.shelf/
+!.mvn/wrapper/maven-wrapper.jar
+
+.idea
+*.iws
 *.iml
+*.ipr
+/target/
